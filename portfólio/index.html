@@ -7,32 +7,81 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-  <header><h1>Meu portfólio</h1>
- 
-</header>  
-<nav>
-    <a href="Sober">Sober</a>
-    <a href="Projetos">projeto</a>
-    <a href="contato">contato</a>
-  </nav>
-  <section id="Sobre">
-<h2>Sobre Mim</h2>
-<p>Olá Meu nome é Sergio Henrique Martins</p>
-  </section>
-  <section id="projetos">
-    <h2>projetos</h2>
-    <div class="projetos"></div>
-    <h3>Projetos</h3>
-    <img src="#" alt="projetos">
-    <p>Descriçao do projeto 1</p>
-    <div class="projeto 2">
-<img src="#" alt="projeto 2">
-<p></p>
+  <header>
+    <h1>Sergio Henrique Martins</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <img src="images/FB_IMG_1738791832241.jpg" alt="Foto de Sergio" class="avatar">
+        <h2>Bem-vindo ao meu portfólio</h2>
+        <p>Estudante de Redes de Computadores apaixonado por tecnologia e inovação.</p>
     </div>
-  </section>
-  <footer>
-    <p>ergio Henrique Martins </p>
-  </footer>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>Sobre Mim</h2>
+        <p>Sou um estudante de Redes de Computadores com experiência em MySQL, HTML, CSS e administração de servidores Linux. Apaixonado por segurança da informação e desenvolvimento web, estou sempre buscando novos desafios.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2>Habilidades</h2>
+        <ul>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fas fa-server"></i> Servidores Linux</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Projetos</h2>
+        <div class="project">
+            <h3>Projeto 1</h3>
+            <p>Descrição do projeto...</p>
+            <a href="#">Ver no GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Projeto 2</h3>
+            <p>Descrição do projeto...</p>
+            <a href="#">Ver no GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sergio Henrique Martins. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>
