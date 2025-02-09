@@ -7,15 +7,26 @@
             color: #333;
         }
         .img{
+           
             height: 20%;
             width: 20%;
-            box-shadow: 0px 0px 10px rgba(204, 175, 175, 0.788);
+            box-shadow: 0px 0px 5px rgba(204, 175, 175, 0.788);
+        }
+        ul{
+            text-align: center;
+        }
+        h1{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
         }
         .skill-card{
-            box-shadow: 0px 0px 10px rgba(204, 175, 175, 0.788);
+          
+            box-shadow: 0px 0px 5px rgba(204, 175, 175, 0.596);
             height: 20%;
             width: 20%;
             margin: auto;
+            
         }
         header {
             background: #2c3e50;
@@ -47,6 +58,8 @@
             background-image:url(../images/SergioHenriqueMartins.png);
             color: white;
             padding: 50px 0;
+            height: 300px;
+            width: 100%;
         }
         .avatar {
             width: 150px;
@@ -62,11 +75,11 @@
             font-size: 18px;
         }
         .project {
-            background: white;
+            background-image: url(../images/i242095.jpeg);
             padding: 20px;
             margin: 10px;
             border-radius: 30px;
-            box-shadow: 0px 0px 10px rgba(204, 175, 175, 0.788);
+            box-shadow: 0px 0px 5px rgba(204, 175, 175, 0.788);
         }
         form {
             display: flex;
