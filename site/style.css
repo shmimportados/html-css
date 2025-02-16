@@ -9,11 +9,17 @@ body{
     background-color: rgb(15, 15, 15);
     height: 100vh;
 }
-   h1{
-    padding: 30px;
-    color: aliceblue;
-    text-align: center;
-   }
+  .flex{
+    display: flex;
+  }
+.redoda{
+    padding: 90px;
+    height: 400px;
+    height: 400px;
+    border-radius: 30px;
+  
+    
+  }
    .meu-desktop{
     text-align: center;
     margin: 10px;
