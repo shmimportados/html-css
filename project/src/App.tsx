@@ -1,181 +1,290 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Server, Database, Code2, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { 
+  LineChart, 
+  Wallet, 
+  BookOpen, 
+  TrendingUp,
+  Users,
+  MessageCircle,
+  Settings,
+  Bell,
+  Search,
+  Shield,
+  Briefcase,
+  BarChart3,
+  Globe2,
+  Lock,
+  Gift
+} from 'lucide-react';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('dashboard');
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200"
-            alt="Sergio Henrique Martins"
-            className="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-blue-500 shadow-xl"
-          />
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Sergio Henrique Martins</h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">Estudante de Redes de Computadores</p>
-          <div className="flex justify-center gap-4 mb-12">
-            <a href="https://github.com" className="hover:text-blue-400 transition-colors">
-              <Github size={24} />
-            </a>
-            <a href="https://linkedin.com" className="hover:text-blue-400 transition-colors">
-              <Linkedin size={24} />
-            </a>
-            <a href="mailto:contact@example.com" className="hover:text-blue-400 transition-colors">
-              <Mail size={24} />
-            </a>
+    <div className="min-h-screen bg-[#0A0F1C] flex">
+      {/* Sidebar */}
+      <div className="w-72 bg-[#151B2C] p-6">
+        <div className="flex items-center gap-3 mb-12">
+          <Shield className="h-10 w-10 text-[#6366F1]" />
+          <div>
+            <h1 className="text-xl font-bold text-white">Pacesida</h1>
+            <p className="text-sm text-gray-400">Investimentos Premium</p>
           </div>
         </div>
-        <div className="absolute bottom-8 animate-bounce">
-          <ChevronDown size={32} />
-        </div>
-      </section>
+        
+        <nav className="space-y-2">
+          <button 
+            onClick={() => setActiveTab('dashboard')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'dashboard' 
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white' 
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <LineChart className="h-5 w-5" />
+            Dashboard
+          </button>
+          <button 
+            onClick={() => setActiveTab('portfolio')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'portfolio'
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white'
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <Briefcase className="h-5 w-5" />
+            Portfólio
+          </button>
+          <button 
+            onClick={() => setActiveTab('market')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'market'
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white'
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <BarChart3 className="h-5 w-5" />
+            Mercado
+          </button>
+          <button 
+            onClick={() => setActiveTab('global')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'global'
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white'
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <Globe2 className="h-5 w-5" />
+            Internacional
+          </button>
+          <button 
+            onClick={() => setActiveTab('learn')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'learn'
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white'
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <BookOpen className="h-5 w-5" />
+            Educação
+          </button>
+          <button 
+            onClick={() => setActiveTab('community')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+              activeTab === 'community'
+                ? 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white'
+                : 'text-gray-400 hover:bg-[#1F2937] hover:text-white'
+            }`}
+          >
+            <Users className="h-5 w-5" />
+            Comunidade
+          </button>
+        </nav>
 
-      {/* About Section */}
-      <section className="py-20 px-4" id="about">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Sobre Mim</h2>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Olá! Sou um estudante apaixonado por tecnologia, atualmente focado em Redes de Computadores.
-              Aos 41 anos, trago uma perspectiva única que combina maturidade profissional com entusiasmo
-              pelo aprendizado contínuo na área de TI.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Minha jornada inclui experiência prática com MySQL, desenvolvimento web utilizando HTML e CSS,
-              e uma sólida base em administração de servidores Linux. Estou constantemente buscando novos
-              desafios e oportunidades para expandir meus conhecimentos.
-            </p>
+        <div className="mt-8 p-4 bg-[#1F2937] rounded-xl">
+          <div className="flex items-center gap-3 mb-3">
+            <Gift className="h-5 w-5 text-[#6366F1]" />
+            <h3 className="text-white font-medium">Convide Amigos</h3>
           </div>
+          <p className="text-sm text-gray-400 mb-3">
+            Ganhe benefícios exclusivos ao convidar amigos para a Pacesida.
+          </p>
+          <button className="w-full py-2 bg-[#6366F1] text-white rounded-lg hover:bg-[#5558DD] transition-colors">
+            Convidar Agora
+          </button>
         </div>
-      </section>
+      </div>
 
-      {/* Skills Section */}
-      <section className="py-20 px-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Habilidades Técnicas</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center hover:transform hover:scale-105 transition-transform">
-              <Database className="w-12 h-12 mx-auto mb-4 text-blue-500" />
-              <h3 className="text-xl font-semibold mb-2">Banco de Dados</h3>
-              <p className="text-gray-600">MySQL</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center hover:transform hover:scale-105 transition-transform">
-              <Code2 className="w-12 h-12 mx-auto mb-4 text-blue-500" />
-              <h3 className="text-xl font-semibold mb-2">Desenvolvimento Web</h3>
-              <p className="text-gray-600">HTML, CSS</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center hover:transform hover:scale-105 transition-transform">
-              <Server className="w-12 h-12 mx-auto mb-4 text-blue-500" />
-              <h3 className="text-xl font-semibold mb-2">Sistemas</h3>
-              <p className="text-gray-600">Linux, Administração de Servidores</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Projetos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=600&h=300"
-                alt="Projeto 1"
-                className="w-full h-48 object-cover"
+      {/* Main Content */}
+      <div className="flex-1">
+        {/* Header */}
+        <header className="bg-[#151B2C] border-b border-[#2D3748] p-6">
+          <div className="flex items-center justify-between">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <input
+                type="text"
+                placeholder="Buscar ativos, fundos..."
+                className="pl-10 pr-4 py-2 bg-[#1F2937] text-white border-none rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6366F1] w-96"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Sistema de Monitoramento</h3>
-                <p className="text-gray-600 mb-4">
-                  Desenvolvimento de um sistema de monitoramento de rede utilizando Linux e Shell Script.
-                </p>
-                <a
-                  href="https://github.com"
-                  className="text-blue-500 hover:text-blue-700 font-medium inline-flex items-center"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  Ver no GitHub
-                </a>
-              </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&h=300"
-                alt="Projeto 2"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Aplicação Web</h3>
-                <p className="text-gray-600 mb-4">
-                  Interface web responsiva para gerenciamento de dados utilizando HTML, CSS e MySQL.
-                </p>
-                <a
-                  href="https://github.com"
-                  className="text-blue-500 hover:text-blue-700 font-medium inline-flex items-center"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  Ver no GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Contato</h2>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-              >
-                Enviar Mensagem
+            <div className="flex items-center gap-6">
+              <button className="p-2 text-gray-400 hover:text-white hover:bg-[#1F2937] rounded-xl transition-colors">
+                <Bell className="h-5 w-5" />
               </button>
-            </form>
+              <button className="p-2 text-gray-400 hover:text-white hover:bg-[#1F2937] rounded-xl transition-colors">
+                <MessageCircle className="h-5 w-5" />
+              </button>
+              <button className="p-2 text-gray-400 hover:text-white hover:bg-[#1F2937] rounded-xl transition-colors">
+                <Settings className="h-5 w-5" />
+              </button>
+              <div className="flex items-center gap-3 pl-6 border-l border-[#2D3748]">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="Profile"
+                  className="h-10 w-10 rounded-xl"
+                />
+                <div>
+                  <p className="text-white font-medium">Carlos Silva</p>
+                  <p className="text-sm text-gray-400">Investidor Premium</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </header>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p>&copy; 2024 Sergio Henrique Martins. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+        {/* Main Content Area */}
+        <main className="p-6">
+          {activeTab === 'dashboard' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-4 gap-6">
+                <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                  <h3 className="text-gray-400 font-medium mb-4">Patrimônio Total</h3>
+                  <p className="text-3xl font-bold text-white">R$ 1.245.532,89</p>
+                  <p className="text-sm text-emerald-400 mt-2 flex items-center gap-1">
+                    <TrendingUp className="h-4 w-4" />
+                    +2,4% hoje
+                  </p>
+                </div>
+                <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                  <h3 className="text-gray-400 font-medium mb-4">Rentabilidade</h3>
+                  <p className="text-3xl font-bold text-emerald-400">+R$ 124.583,32</p>
+                  <p className="text-sm text-emerald-400 mt-2">+18,7% no total</p>
+                </div>
+                <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                  <h3 className="text-gray-400 font-medium mb-4">Perfil de Risco</h3>
+                  <p className="text-3xl font-bold text-white">Moderado</p>
+                  <p className="text-sm text-gray-400 mt-2">Estratégia balanceada</p>
+                </div>
+                <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                  <h3 className="text-gray-400 font-medium mb-4">Status VIP</h3>
+                  <p className="text-3xl font-bold text-[#6366F1]">Premium</p>
+                  <p className="text-sm text-gray-400 mt-2">Benefícios exclusivos</p>
+                </div>
+              </div>
+
+              <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl font-semibold text-white">Recomendações Personalizadas</h3>
+                  <button className="text-[#6366F1] hover:text-[#5558DD] transition-colors">
+                    Ver todas
+                  </button>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-[#1F2937] rounded-xl">
+                    <div>
+                      <h4 className="text-white font-medium">VTSAX - Vanguard Total Stock Market Index Fund</h4>
+                      <p className="text-sm text-gray-400">Exposição ao mercado americano com baixo custo</p>
+                    </div>
+                    <button className="px-6 py-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white rounded-lg hover:opacity-90 transition-opacity">
+                      Investir
+                    </button>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-[#1F2937] rounded-xl">
+                    <div>
+                      <h4 className="text-white font-medium">Tesouro IPCA+ 2045</h4>
+                      <p className="text-sm text-gray-400">Proteção contra inflação no longo prazo</p>
+                    </div>
+                    <button className="px-6 py-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white rounded-lg hover:opacity-90 transition-opacity">
+                      Investir
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#151B2C] p-6 rounded-xl border border-[#2D3748]">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl font-semibold text-white">Últimas Transações</h3>
+                  <button className="text-[#6366F1] hover:text-[#5558DD] transition-colors">
+                    Ver histórico
+                  </button>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-[#1F2937] rounded-xl">
+                    <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 bg-emerald-400/10 text-emerald-400 flex items-center justify-center rounded-lg">
+                        <TrendingUp className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Compra de AAPL</p>
+                        <p className="text-sm text-gray-400">15 de Março, 2024</p>
+                      </div>
+                    </div>
+                    <p className="text-emerald-400 font-medium">+R$ 25.000,00</p>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-[#1F2937] rounded-xl">
+                    <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 bg-red-400/10 text-red-400 flex items-center justify-center rounded-lg">
+                        <TrendingUp className="h-5 w-5 transform rotate-180" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Venda de TSLA</p>
+                        <p className="text-sm text-gray-400">14 de Março, 2024</p>
+                      </div>
+                    </div>
+                    <p className="text-red-400 font-medium">-R$ 17.500,00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'portfolio' && (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold text-white">Gestão de Portfólio</h2>
+              <p className="text-gray-400">Interface de gestão de portfólio em breve</p>
+            </div>
+          )}
+
+          {activeTab === 'market' && (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold text-white">Análise de Mercado</h2>
+              <p className="text-gray-400">Análises e insights em breve</p>
+            </div>
+          )}
+
+          {activeTab === 'global' && (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold text-white">Mercado Internacional</h2>
+              <p className="text-gray-400">Investimentos globais em breve</p>
+            </div>
+          )}
+
+          {activeTab === 'learn' && (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold text-white">Centro Educacional</h2>
+              <p className="text-gray-400">Conteúdo educacional em breve</p>
+            </div>
+          )}
+
+          {activeTab === 'community' && (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold text-white">Comunidade</h2>
+              <p className="text-gray-400">Espaço da comunidade em breve</p>
+            </div>
+          )}
+        </main>
+      </div>
     </div>
   );
 }
