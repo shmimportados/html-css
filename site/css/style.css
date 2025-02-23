@@ -9,6 +9,18 @@ body{
     background-color: black;
     height: 100vh;
 }
+.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 200px;
+}
+.titulo samp{
+    color: #00ff08;
+}
+.flex{
+    display: flex;
+}
 .inerface{
     max-width: 1288px;
     margin: 0 auto;
@@ -39,24 +51,94 @@ header nav ul{
         display: inline-block;
         padding: 0 30px;
     }
-    header .btn-contato button{
-     padding: 10px 40px;
-     font-size: 18px;
-     font-weight: 600;
-     background-color: #00ff08;
-     border: 0;
-     border-radius: 30px;
-     cursor: pointer;
-    }
-    header .btn-contato button:hover{
+     
+     .btn-contato button:hover{
         display: inline-block;
         box-shadow: 0px 0px 8px #00ff08a4;
-        transform: scale(1.05);
-        
-        
-        
-
+        transform: scale(1.05);                     
     }
 .logo img{
     height: 150px;
 }
+/* estilo topo do site*/
+section .topo-do-site{
+    padding: 40px 4%;
+}
+.img-todo-site img{
+    margin-left: 100px;
+    height: 200px;
+    border-radius: 30px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 2s;
+    margin-left: 10px;
+}
+.btn-contato button:hover{
+    display: inline-block;
+    box-shadow: 0px 0px 8px #00ff08a4;
+    transform: scale(1.05); }  
+section .topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap:90px ;
+}       
+.topo-do-site h1{
+    color: #fff;
+    font-size: 38px;
+    margin-left: 10px;
+}
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin-left: 10px;
+   }
+   @keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+   }
+   .especilidade-box img{
+    height: 70px;
+    margin: 10px 10px;
+   }
+   .flex{
+    gap: 40px;
+   }
+   .especilidade{
+    padding: 48px 4%;
+   }
+   .especilidade-box:hover{
+   transform: scale(1.05);
+   box-shadow: 0 0 8px #ffffff67;
+
+   }
+   .especilidade-box {
+    margin-top: 30px;
+    color: #fff;
+    padding: 48px;
+    transition: .2s;       
+    border-radius: 20px;
+   }
+   .img-sobre img{
+    height: 250px;
+    top: 200px;
+    margin-left: 40px;
+    margin-top: 100px;
+   }
+   .txt-sobre p{
+    
+   }
+   .txt-sobre h2{
+    margin-top: 90px;
+   }
