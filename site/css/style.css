@@ -80,7 +80,7 @@ section .topo-do-site{
     border-radius: 30px;
     cursor: pointer;
     transition: 2s;
-    margin-left: 10px;
+    margin-left: 90px;
 }
 .btn-contato button:hover{
     display: inline-block;
@@ -94,11 +94,11 @@ section .topo-do-site .flex{
 .topo-do-site h1{
     color: #fff;
     font-size: 38px;
-    margin-left: 10px;
+    margin-left: 100px;
 }
 .topo-do-site .txt-topo-site p{
     color: #fff;
-    margin-left: 10px;
+    margin-left: 100px;
    }
    @keyframes flutuar{
     0%{
@@ -124,21 +124,91 @@ section .topo-do-site .flex{
 
    }
    .especilidade-box {
+    margin-left: 40px;
     margin-top: 30px;
     color: #fff;
-    padding: 48px;
+    padding: 40px;
     transition: .2s;       
     border-radius: 20px;
    }
    .img-sobre img{
+    border-radius: 30px;
     height: 250px;
     top: 200px;
     margin-left: 40px;
     margin-top: 100px;
    }
-   .txt-sobre p{
-    
+   .txt-socil button{
+    height: 30px;
    }
    .txt-sobre h2{
     margin-top: 90px;
    }
+   .sobre{
+    padding: 42px 4%;
+   }
+   .txt-sobre{
+    color: #fff;
+   }
+   .txt-sobre h2 samp{
+    color: #00ff08;
+    display: block;
+   }
+    p{
+    text-align: justify;
+   }
+   .txt-socil a img{
+    height: 30px;
+    margin: 5px;
+    transition: 2s;
+   }
+   .txt-socil a img:hover{
+    box-shadow: 0 0 8px #fff;
+    transform: scale(1.05);
+   }
+   section.portfólio{
+    padding: 82px 4%;
+    box-shadow: 0 0 5px 4px #ffffff34;
+   }
+   section.portfólio h2 {
+    margin: 0;
+   }
+   .interface h2{
+    margin: 30px;
+   }
+  
+   .img-port{
+    width: 350px;
+    height: 462px;
+    background-size: cover;
+    background-position: 100% 0% ;
+    transition: 8s;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+   }
+   .img-port:hover{
+    background-position: 100% 100% 
+   }
+   .ovelei{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020202b6;
+    border-radius: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight:600px ;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+   }
+   .ovelei:hover{
+    opacity: 1 ;
+   }
+   
+
